@@ -1,0 +1,62 @@
+-- --------------------------------------------------------
+-- Servidor:                     127.0.0.1
+-- Versão do servidor:           5.7.26 - MySQL Community Server (GPL)
+-- OS do Servidor:               Win64
+-- HeidiSQL Versão:              10.2.0.5599
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- Copiando estrutura do banco de dados para web-final
+CREATE DATABASE IF NOT EXISTS `Web-Final` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `Web-Final`;
+
+-- Copiando estrutura para tabela web-final.alunos
+CREATE TABLE IF NOT EXISTS `alunos` (
+  `id` int(4) NOT NULL,
+  `nome` varchar(60) NOT NULL,
+  `cpf` varchar(50) NOT NULL DEFAULT '',
+  `idade` int(20) NOT NULL,
+  `curso` varchar(60) NOT NULL,
+  `sexo` varchar(60) NOT NULL,
+  `matricula` int(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- Copiando dados para a tabela web-final.alunos: 4 rows
+DELETE FROM `alunos`;
+/*!40000 ALTER TABLE `alunos` DISABLE KEYS */;
+INSERT INTO `alunos` (`id`, `nome`, `cpf`, `idade`, `curso`, `sexo`, `matricula`) VALUES
+	(1, 'Arthur', '12345678910', 19, 'Design', 'Masculino', 123),
+	(2, 'Barbara', '12344321090', 20, 'Arquitetura', 'Feminino', 124),
+	(3, 'Fernando', '876556781275', 22, 'Ciencia da Computacao', 'Masculino', 125),
+	(4, 'Giuliana', '123456124554', 18, 'Enfermagem', 'Feminino', 126);
+/*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela web-final.empresas
+CREATE TABLE IF NOT EXISTS `empresas` (
+  `id` int(4) NOT NULL,
+  `nome` varchar(60) NOT NULL,
+  `cnpj` varchar(120) NOT NULL,
+  `area` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- Copiando dados para a tabela web-final.empresas: 4 rows
+DELETE FROM `empresas`;
+/*!40000 ALTER TABLE `empresas` DISABLE KEYS */;
+INSERT INTO `empresas` (`id`, `nome`, `cnpj`, `area`) VALUES
+	(1, 'MRV', '123455678910123', 'Construção'),
+	(2, 'Autojapa', '12344321021456', 'Venda de Veiculos'),
+	(3, 'Banco Inter', '8765567890789', 'Tecnologia da Informação'),
+	(4, 'Hospital João VVIII', '12345612875045', 'Medicina');
+/*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
