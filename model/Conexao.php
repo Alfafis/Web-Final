@@ -1,6 +1,6 @@
 <?php
 	
-define('DB_NAME','banco'); // COLOCAR O NOME DA BASE DE DADOS
+define('DB_NAME','web-final'); // COLOCAR O NOME DA BASE DE DADOS
 define('DB_HOST', 'localhost'); // COLOCAR O HOST DA BASE DE DADOS
 define('DB_USER','root'); // COLOCAR O USUÁRIO DA BASE DE DADOS
 define('DB_PASS','Rafael@1'); // COLOCAR A SENHA DO BANCO DE DADOS AQUI
