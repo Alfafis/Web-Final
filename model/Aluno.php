@@ -1,15 +1,15 @@
 <?php
+include __DIR__.'/../model/Usuario.php';
 include __DIR__.'/Conexao.php';
 
-class Aluno extends Conexao {
-    private $id; 
+class Aluno extends Usuario {
+    private $id;
 	private $nome;
-    private $cpf;    
+    private $cpf;
     private $idade;
     private $curso;
     private $sexo;
     private $matricula;
-
 
     public function getId() {
         return $this->id;
@@ -45,14 +45,14 @@ class Aluno extends Conexao {
         $this->curso = $curso;
         return $this;
     }    
-    public function getSexo()  {
+    public function getSexo() {
         return $this->sexo;
     }
     public function setSexo($sexo) {
         $this->sexo = $sexo;
         return $this;
     }    
-    public function getMatricula()   {
+    public function getMatricula() {
         return $this->matricula;
     }
     public function setMatricula($matricula) {
@@ -60,7 +60,7 @@ class Aluno extends Conexao {
         return $this;
     }
 
-    public function insert($obj){    
+    public function insert($obj) {
     	$sql = "INSERT INTO alunos(nome,cpf,idade,curso,sexo,matricula) VALUES (:nome,:cpf,:idade,:curso,:sexo,:matricula)";
     	$consulta = Conexao::prepare($sql);
         $consulta->bindValue('nome',  $obj->nome);
@@ -69,11 +69,10 @@ class Aluno extends Conexao {
         $consulta->bindValue('curso', $obj->curso);
         $consulta->bindValue('sexo' , $obj->sexo);
         $consulta->bindValue('matricula' , $obj->matricula);
-    	$consulta->execute();
-        return Conexao::lastId();   
+        return $consulta->execute();
 	}
 
-	public function update($obj,$id = null){
+	public function update($obj,$id = null) {
 		$sql = "UPDATE alunos SET nome = :nome, cpf = :cpf,idade = :idade, curso =:curso, sexo = :sexo, matricula = :matricula";
 		$consulta = Conexao::prepare($sql);
 		$consulta->bindValue('nome', $obj->nome);
@@ -86,21 +85,21 @@ class Aluno extends Conexao {
 		return $consulta->execute();
 	}
 
-	public function delete($obj,$id = null){
+	public function delete($obj,$id = null) {
 		$sql =  "DELETE FROM alunos WHERE id = :id";
 		$consulta = Conexao::prepare($sql);
 		$consulta->bindValue('id',$id);
 		$consulta->execute();
 	}
 
-	public function find($id = null){
+	public function find($id = null) {
         $sql =  "SELECT * FROM alunos WHERE id = :id";
         $consulta = Conexao::prepare($sql);
         $consulta->bindValue('id',$id);
         $consulta->execute();
 	}
 
-	public function findAll(){
+	public function findAll() {
 		$sql = "SELECT * FROM alunos";
 		$consulta = Conexao::prepare($sql);
 		$consulta->execute();

@@ -34,8 +34,8 @@ DELETE FROM `alunos`;
 INSERT INTO `alunos` (`id`, `nome`, `cpf`, `idade`, `curso`, `sexo`, `matricula`) VALUES
 	(1, 'Arthur', '12345678910', 19, 'Design', 'Masculino', 123),
 	(2, 'Barbara', '12344321090', 20, 'Arquitetura', 'Feminino', 124),
-	(3, 'Fernando', '876556781275', 22, 'Ciencia da Computacao', 'Masculino', 125),
-	(4, 'Giuliana', '123456124554', 18, 'Enfermagem', 'Feminino', 126);
+	(3, 'Fernando', '87655678127', 22, 'Ciencia da Computacao', 'Masculino', 125),
+	(4, 'Giuliana', '12345612455', 18, 'Enfermagem', 'Feminino', 126);
 /*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela web-final.empresas
@@ -51,10 +51,10 @@ CREATE TABLE IF NOT EXISTS `empresas` (
 DELETE FROM `empresas`;
 /*!40000 ALTER TABLE `empresas` DISABLE KEYS */;
 INSERT INTO `empresas` (`id`, `nome`, `cnpj`, `area`) VALUES
-	(1, 'MRV', '123455678910123', 'Construção'),
-	(2, 'Autojapa', '12344321021456', 'Venda de Veiculos'),
+	(1, 'MRV', '1234556789101', 'Construção'),
+	(2, 'Autojapa', '1234432102145', 'Venda de Veiculos'),
 	(3, 'Banco Inter', '8765567890789', 'Tecnologia da Informação'),
-	(4, 'Hospital João VVIII', '12345612875045', 'Medicina');
+	(4, 'Hospital João VVIII', '1234561287504', 'Medicina');
 /*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

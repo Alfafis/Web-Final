@@ -1,10 +1,10 @@
 <?php
 include __DIR__.'/../model/Aluno.php';
 
-class AlunoControl{
+class AlunoControl {
 	function insert($obj){
 		$aluno = new Aluno();
-		return $aluno->insert($obj);		
+		return $aluno->insert($obj);
 	}
 
 	function update($obj,$id){

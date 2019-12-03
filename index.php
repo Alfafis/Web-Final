@@ -28,25 +28,25 @@ function checkRequest() {
 $answer = checkRequest();
 
 $request = $_SERVER['REQUEST_URI']; 
+http://localhost:80/Web-Final/
 
 switch ($request) {
     case '/'.PASTAPROJETO:
-      require __DIR__ . '/api/api.php';
-        break;
+      require __DIR__ . '/view/index.html';
+		break;
     case '/'.PASTAPROJETO.'/' :
-        require __DIR__ . '/api/api.php';
+				require __DIR__ . '/view/index.html';
         break;
     case '' :
         require __DIR__ . '/api/api.php';
         break;
-    case '/'.PASTAPROJETO.'/pessoas' :
+    case '/'.PASTAPROJETO.'/aluno' :
         require __DIR__ . '/api/'.$answer.'_Aluno.php';
         break;
-    case '/'.PASTAPROJETO.'/conteudo' :
+    case '/'.PASTAPROJETO.'/empresa' :
         require __DIR__ . '/api/'.$answer.'_Empresa.php';
         break;
-    
     default:
-        //require __DIR__ . '/api/404.php';
+        require __DIR__ . '/api/404.php';
         break;
 }
