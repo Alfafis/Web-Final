@@ -31,6 +31,9 @@ $request = $_SERVER['REQUEST_URI'];
 http://localhost/Web-Final/
 
 switch ($request) {
+    case '/':
+      require __DIR__ . '/view/index.html';
+		break;
     case '/'.PASTAPROJETO:
       require __DIR__ . '/view/index.html';
 		break;
