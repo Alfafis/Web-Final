@@ -1,7 +1,7 @@
 window.onload = function(e) {
 	fetch(
 		'http://localhost/Web-Final/aluno', {
-		}).then(response => response.json())
+    }).then(response => response.json())
 	.then(data => { 
 		console.log(data);
 		data.forEach(aluno => {
@@ -26,7 +26,8 @@ window.onload = function(e) {
 }
 
 function adicionarAluno(){
-	document.getElementById('formPessoa').style.display="block"
+  let form = document.querySelector('.formAluno');
+ form.classList.toggle('formVisible');
 }
 
 function enviarForm() {

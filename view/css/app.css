@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.formVisible {
+  display: block;
+}
+
 .centered {
 	text-align: center;
   	display: table-row;

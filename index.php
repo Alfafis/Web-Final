@@ -50,6 +50,6 @@ switch ($request) {
         require __DIR__ . '/api/'.$answer.'_Empresa.php';
         break;
     default:
-        require __DIR__ . '/api/404.php';
+        //require __DIR__ . '/api/404.php';
         break;
 }
