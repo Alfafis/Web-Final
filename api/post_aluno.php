@@ -9,7 +9,6 @@
 			$alunoControl = new AlunoControl();
 			$alunoControl->insert($obj);
 			http_response_code(200);
-			//$obj->id = $r	esposta;
 			echo json_encode($obj);
 		}
 		catch (PDOException $e) {

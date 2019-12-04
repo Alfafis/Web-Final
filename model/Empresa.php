@@ -2,17 +2,10 @@
 include __DIR__.'/Conexao.php';
 
 class Empresa extends Conexao {
-	private $id;
     private $nome;
     private $cnpj;
     private $area;
 
-    function getId() {
-        return $this->id;
-    }
-    function setId($id) {
-        $this->id = $id;
-    }
     function getNome() {
         return $this->nome;
     }
@@ -33,9 +26,8 @@ class Empresa extends Conexao {
     }
 
     public function insert($obj){
-    	$sql = "INSERT INTO empresas(id,nome,cnpj,area) VALUES (:id,:nome,:cnpj,:area)";
+    	$sql = "INSERT INTO empresas(nome,cnpj,area) VALUES (:nome,:cnpj,:area)";
     	$consulta = Conexao::prepare($sql);
-        $consulta->bindValue('id',  $obj->id);
         $consulta->bindValue('nome', $obj->nome);
         $consulta->bindValue('cnpj' , $obj->cnpj);        
         $consulta->bindValue('area' , $obj->area);

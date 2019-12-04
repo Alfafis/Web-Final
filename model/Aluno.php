@@ -2,8 +2,7 @@
 include __DIR__.'/../model/Usuario.php';
 include __DIR__.'/Conexao.php';
 
-class Aluno extends Usuario {
-    //private $id;
+class Aluno extends Conexao {
 	private $nome;
     private $cpf;
     private $idade;
@@ -11,14 +10,6 @@ class Aluno extends Usuario {
     private $sexo;
     private $matricula;
 
-    /*
-    public function getId() {
-        return $this->id;
-    }
-    public function setId($id) {
-        $this->id = $id;
-    }
-    */
     public function getNome() {
         return $this->nome;
     }   
