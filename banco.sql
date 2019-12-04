@@ -13,12 +13,12 @@
 
 
 -- Copiando estrutura do banco de dados para web-final
-CREATE DATABASE IF NOT EXISTS `Web-Final` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `Web-Final`;
+CREATE DATABASE IF NOT EXISTS `web-final` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `web-final`;
 
 -- Copiando estrutura para tabela web-final.alunos
 CREATE TABLE IF NOT EXISTS `alunos` (
-  `id` int(4) unsigned NOT NULL  AUTO_INCREMENT,
+  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `cpf` varchar(50) NOT NULL DEFAULT '',
   `idade` int(20) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `alunos` (
   `sexo` varchar(60) NOT NULL,
   `matricula` int(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- Copiando dados para a tabela web-final.alunos: 4 rows
 DELETE FROM `alunos`;
@@ -40,12 +40,12 @@ INSERT INTO `alunos` (`id`, `nome`, `cpf`, `idade`, `curso`, `sexo`, `matricula`
 
 -- Copiando estrutura para tabela web-final.empresas
 CREATE TABLE IF NOT EXISTS `empresas` (
-  `id` int(4) unsigned NOT NULL  AUTO_INCREMENT,
+  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `cnpj` varchar(120) NOT NULL,
   `area` varchar(60) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- Copiando dados para a tabela web-final.empresas: 4 rows
 DELETE FROM `empresas`;
@@ -56,6 +56,21 @@ INSERT INTO `empresas` (`id`, `nome`, `cnpj`, `area`) VALUES
 	(3, 'Banco Inter', '8765567890789', 'Tecnologia da Informação'),
 	(4, 'Hospital João VVIII', '1234561287504', 'Medicina');
 /*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela web-final.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(60) NOT NULL,
+  `senha` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- Copiando dados para a tabela web-final.users: 1 rows
+DELETE FROM `users`;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `nome`, `senha`) VALUES
+	(1, 'admin', '123');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
