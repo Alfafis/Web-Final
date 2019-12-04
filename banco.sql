@@ -18,7 +18,7 @@ USE `Web-Final`;
 
 -- Copiando estrutura para tabela web-final.alunos
 CREATE TABLE IF NOT EXISTS `alunos` (
-  `id` int(4) NOT NULL,
+  `id` int(4) unsigned NOT NULL  AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `cpf` varchar(50) NOT NULL DEFAULT '',
   `idade` int(20) NOT NULL,
@@ -40,7 +40,7 @@ INSERT INTO `alunos` (`id`, `nome`, `cpf`, `idade`, `curso`, `sexo`, `matricula`
 
 -- Copiando estrutura para tabela web-final.empresas
 CREATE TABLE IF NOT EXISTS `empresas` (
-  `id` int(4) NOT NULL,
+  `id` int(4) unsigned NOT NULL  AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `cnpj` varchar(120) NOT NULL,
   `area` varchar(60) NOT NULL,

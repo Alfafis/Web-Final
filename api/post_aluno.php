@@ -1,8 +1,6 @@
 <?php
 	include __DIR__.'/../control/AlunoControl.php';
 
-	header('Content-type: application/json');
-
 	$data = file_get_contents('php://input');
 	$obj =  json_decode($data);
 
