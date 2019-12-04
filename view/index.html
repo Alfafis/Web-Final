@@ -3,23 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <title>Fronteira abertas</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="../view/css/app.css" />
   </head>
   <body>
     <div class="container fluid">
       <div class="row">
         <div class="col-sm-12">
-          <table class="table stripped" id="tabledados">
-            <tr>
-              <th>id</th>
-              <th>nome</th>
-              <th>cpf</th>
-              <th>idade</th>
-              <th>curso</th>
-              <th>sexo</th>
-              <th>matricula</th>
-            </tr>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>nome</th>
+                <th>cpf</th>
+                <th>idade</th>
+                <th>curso</th>
+                <th>sexo</th>
+                <th>matricula</th>
+              </tr>
+            </thead>
+            <tbody id="tabledados">
+            </tbody>
           </table>
         </div>
       </div>
@@ -32,48 +36,57 @@
         <div class="col-sm-12">
           <h1>Adicionar uma nova aluno</h1>
           <form id="adicionarAluno" action="javascript:enviarForm()">
-            <div class="form-group">
-              <label for="nome">Nome</label>
-              <input type="text" class="form-control" aria-describedby="nomeHelp" id="nome" placeholder="Digite seu nome">
-              <small id="nomeHelp" class="form-text text-muted">Não vamos publicar seu nome</small>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" aria-describedby="nomeHelp" id="nome" placeholder="Digite seu nome">
+              </div>
             </div> 
-            <div class="form-group">
-              <label for="cpf">Cpf</label>
-              <input type="text" class="form-control" id="cpf" placeholder="Digite seu cpf">
-              <small id="cpfHelp" class="form-text text-muted">Cpf</small>
-            </div>  
-            <div class="form-group">
-              <label for="idade">Idade</label>
-              <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
-              <small id="idadeHelp" class="form-text text-muted">Idade em anos</small>
-            </div>  
-            <div class="form-group">
-              <label for="curso">Curso</label>
-              <input type="text" class="form-control" id="curso" placeholder="Digite sua Curso">
-              <small id="cursoHelp" class="form-text text-muted">Cursando</small>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="cpf">Cpf</label>
+                <input type="text" class="form-control" id="cpf" placeholder="Digite seu cpf">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="sexo">Sexo</label>
-              <br>
-              <div class="form-check-inline">
-                <label class="form-check-label"></label>
-                <input type="radio" class="form-check-input" value="1" name="sexo">Masculino		
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="idade">Idade</label>
+                <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
               </div>
-              <div class="form-check-inline">
-                <label class="form-check-label"></label>
-                <input type="radio" class="form-check-input" value="2" name="sexo">Feminino			    
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="curso">Curso</label>
+                <input type="text" class="form-control" id="curso" placeholder="Digite sua Curso">
               </div>
-            </div>				  
-            <div class="form-group">
-              <label for="matricula">Matricula</label>
-              <input type="number" class="form-control" id="matricula" placeholder="Digite sua Matricula">
-              <small id="matriculaHelp" class="form-text text-muted">Matricula</small>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="sexo">Sexo</label>
+                <div class="form-check-inline">
+                  <label class="form-check-label"></label>
+                  <input type="radio" class="form-check-input" value="Masculino" name="sexo">Masculino		
+                </div>
+                <div class="form-check-inline">
+                  <label class="form-check-label"></label>
+                  <input type="radio" class="form-check-input" value="Feminino" name="sexo">Feminino			    
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label for="matricula">Matricula</label>
+                <input type="text" class="form-control" id="matricula" placeholder="Digite sua Matricula">
+              </div>
             </div>
             <input type="submit" class="btn btn-primary" value="Enviar">
           </form>				
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../view/js/app.js"></script>
   </body>
 </html>
