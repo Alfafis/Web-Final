@@ -5,7 +5,7 @@ window.onload = function(e) {
 	.then(data => { 
 		console.log(data);
 		data.forEach(aluno => {
-			var table = document.getElementById("tabledados");
+			var table = document.querySelector('#tabledados');
 			var row = table.insertRow(-1);
 			var idColuna = row.insertCell(0);
 			var nomeColuna = row.insertCell(1); 
@@ -13,7 +13,7 @@ window.onload = function(e) {
 			var idadeColuna = row.insertCell(3); 
 			var cursoColuna = row.insertCell(4); 
 			var sexoColuna = row.insertCell(5); 
-			var matriculaColuna = row.insertCell(5); 
+			var matriculaColuna = row.insertCell(6);
 			idColuna.innerHTML = aluno.id;
 			nomeColuna.innerHTML = aluno.nome;
 			cpfColuna.innerHTML = aluno.cpf;
@@ -31,7 +31,7 @@ function adicionarAluno(){
 }
 
 function enviarForm() {
-	var form = document.getElementById('adicionarAluno');
+	var form = document.querySelector('#adicionarAluno');
 	var data = {};
 	data['nome'] = form.nome.value
 	data['cpf'] = form.cpf.value;
@@ -41,7 +41,7 @@ function enviarForm() {
 	data['matricula'] = form.matricula.value;
 	// console.log(JSON.stringify(data));
 	fetch('http://localhost/Web-Final/aluno', {
-		method: 'POST',       
+		method: 'POST',
 		body: JSON.stringify(data)
 	})
 	.then((response) => {
