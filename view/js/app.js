@@ -14,13 +14,13 @@ window.onload = function(e) {
 			var cursoColuna = row.insertCell(4); 
 			var sexoColuna = row.insertCell(5); 
 			var matriculaColuna = row.insertCell(5); 
-			idColuna.innerHTML = pessoa.id;
-			nomeColuna.innerHTML = pessoa.nome;
-			cpfluna.innerHTML = pessoa.cpf;
-			idadeColuna.innerHTML = pessoa.idade;
-			cursoColuna.innerHTML = pessoa.curso;
-			sexoColuna.innerHTML = pessoa.sexo;
-			matriculaColuna.innerHTML = pessoa.matricula;
+			idColuna.innerHTML = aluno.id;
+			nomeColuna.innerHTML = aluno.nome;
+			cpfColuna.innerHTML = aluno.cpf;
+			idadeColuna.innerHTML = aluno.idade;
+			cursoColuna.innerHTML = aluno.curso;
+			sexoColuna.innerHTML = aluno.sexo;
+			matriculaColuna.innerHTML = aluno.matricula;
 		})
 	}).catch(error => console.error(error))
 }
