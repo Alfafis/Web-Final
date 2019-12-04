@@ -1,16 +1,20 @@
+html {
+	height: 100vh;
+	overflow-x: hidden;
+}
+nav.navbar  {
+	margin-bottom: 15px;
+}
 .formAluno {
 	display: none;
 }
-
 .formVisible {
   display: block;
 }
-
 .centered {
 	text-align: center;
   	display: table-row;
 }
-
 
 /* Login */
 body.log {
