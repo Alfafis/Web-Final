@@ -32,13 +32,13 @@ http://localhost/Web-Final/
 
 switch ($request) {
     case '/':
-      require __DIR__ . '/view/login.html';
+      require __DIR__ . '/view/index.html';
 		break;
     case '/'.PASTAPROJETO:
-      require __DIR__ . '/view/login.html';
+      require __DIR__ . '/view/index.html';
 		break;
     case '/'.PASTAPROJETO.'/' :
-				require __DIR__ . '/view/login.html';
+				require __DIR__ . '/view/index.html';
         break;
     case '' :
         require __DIR__ . '/api/api.php';

@@ -26,8 +26,8 @@ window.onload = function(e) {
 }
 
 function adicionarAluno(){
-  let form = document.querySelector('.formAluno');
- form.classList.toggle('formVisible');
+  var form = document.querySelector('.formAluno');
+ 	form.classList.toggle('formVisible');
 }
 
 function enviarForm() {
@@ -54,4 +54,18 @@ function enviarForm() {
 	})
 	.then((data) => console.log(data))
 	.catch(err => console.log('Error message:', err.statusText));
+}
+
+function logar() {
+	fetch(
+		'http://localhost/Web-Final/user', {
+    }).then(response => response.json())
+	.then(data => { 
+		console.log(data);
+		data.forEach(user => {
+		var form = document.querySelector('#formContent');
+		var data = {};
+		data['nome'] == form.nome.value
+		data['senha'] == form.cpf.value;
+		)}
 }

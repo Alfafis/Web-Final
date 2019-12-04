@@ -1,5 +1,4 @@
 <?php
-include __DIR__.'/../model/Usuario.php';
 include __DIR__.'/Conexao.php';
 
 class Aluno extends Conexao {
