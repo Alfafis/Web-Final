@@ -1,29 +1,27 @@
 <?php
-include __DIR__.'/../control/AlunoControl.php';
- 
+	include __DIR__.'/../control/AlunoControl.php';
 
-header('Content-type: application/json');
+	header('Content-type: application/json');
 
-$data = file_get_contents('php://input');
-$obj =  json_decode($data);
+	$data = file_get_contents('php://input');
+	$obj =  json_decode($data);
 
-if(!empty($data)){	
-	try {
- 		$alunoControl = new AlunoControl();
- 		$resposta = $alunoControl->insert($obj);
- 		http_response_code(200);
- 		$obj->id = $resposta;
- 		echo json_encode($obj);
- 	}
- 	catch (PDOException $e) {
- 		http_response_code(400);
-		echo json_encode(array("mensagem" => "Parâmetros Inválidos"));
+	if(!empty($data)){	
+		try {
+			$alunoControl = new AlunoControl();
+			$alunoControl->insert($obj);
+			http_response_code(200);
+			//$obj->id = $r	esposta;
+			echo json_encode($obj);
+		}
+		catch (PDOException $e) {
+			http_response_code(400);
+			echo json_encode(array("mensagem" => "Parâmetros Inválidos"));
+		}
 	}
-}
-else {
-	http_response_code(400);
-	echo json_encode(array("mensagem" => "Não foram enviados parâmetros"));
-}
-
+	else {
+		http_response_code(400);
+		echo json_encode(array("mensagem" => "Não foram enviados parâmetros"));
+	}
 
 ?>

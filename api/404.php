@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html style="background-color:rgba(255, 99, 71, 0.5)">
-<body>
-    <h1 id=centro> Desculpe, você tentou acessar uma pagina inválida</h1>
-    
+<html>
     <style>
-    h1{
+    h3 {
         text-align: center;
-       
         padding: 20%;
+        background-color: gray;
     }
     </style>
-</body>
-
+    <body>
+        <h3> Desculpe, você tentou acessar uma pagina inválida</h3>
+    </body>
 </html>

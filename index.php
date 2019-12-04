@@ -28,7 +28,7 @@ function checkRequest() {
 $answer = checkRequest();
 
 $request = $_SERVER['REQUEST_URI']; 
-http://localhost:80/Web-Final/
+http://localhost/Web-Final/
 
 switch ($request) {
     case '/'.PASTAPROJETO:
