@@ -7,11 +7,20 @@ html {
 body {
 	font-family: 'Roboto', sans-serif;
 	background: #9e9e9e30;
+	background-image: url('https://peopleti.com.br/wp-content/uploads/2017/07/fundo-azul-small2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 80vh;
 }
 div.container {
-	max-width: 90%;
+	background: #eeeeee;
+	max-width: 80%;
+	position: relative;
+	min-height:100%;
 }
-
+div.container.fluid {
+	background: unset;
+}
 /* Menu */
 #menu span {
 	font-family: 'Oswald', sans-serif;
@@ -25,39 +34,37 @@ div.container {
 	font-weight: 400;
 }
 nav.navbar  {
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
-#menu a.nav-link {
+#menu a.nav-link:hover {
 	color: #ffffff;
 }
-li.nav-item:not(:first-child):hover, a.navl-link:not(:first-child):hover {
-	background: #fb030390;
+li.nav-item	:hover, a.navl-link:hover {
+	background: #fd7070;
 	color: #ffffff;
-	border-radius: 3%;
+	border: none;
 }
 
 /* Conteudo*/
-#cards .grids-card {
-	display: inline-grid;
-	grid-template-columns: repeat(2, 3fr);
-	width: 100%;
-}
-#cards .card {
-	margin: 10px;
-	padding: 10px;
+#cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 #cards a.card {
-	background: #343a4090;
+	background: #343a40;
 	text-decoration: unset;
 	color: #ffffff;
 	border: unset;
 	height: 150px;
+	padding: 10px;
+	margin: 20px;
+	width: 90%;
 }
 #cards a card-icon {
 	height: 50px;
 }
 #cards a.card:hover {
-	box-shadow: 0 0px 8px 8px rgba(0,0,0,0.3);
+	box-shadow: 0 0px 8px 8px rgba(209, 209, 209, 0.3);
 	color: red;
 }
 #cards .card-body {
@@ -78,11 +85,12 @@ li.nav-item:not(:first-child):hover, a.navl-link:not(:first-child):hover {
 /* Footer*/
 .footer {
 	background: #cccccc;
-	position: fixed;
+	position: absolute;
+	padding: 5px 0;
 	width: 100vw;
 	height: 30px;
-	padding: 5px 0;
-	bottom: 0;
+	clear: both;
+	bottom:0;
 }
 .footer span {
 	font-family: 'Oswald', sans-serif;

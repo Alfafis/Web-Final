@@ -21,29 +21,28 @@
           <h4>Adicionar uma nova empresa</h4>
           <form id="adicionarEmpresa" action="javascript:enviarForm()">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="nome">Nome</label>
+                  <label>Nome</label>
                   <input type="text" class="form-control" aria-describedby="nomeHelp" id="nome"
                     placeholder="Digite seu nome">
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="form-group">
-                  <label for="cpf">Cnpj</label>
-                  <input type="text" class="form-control" id="cpnj" placeholder="Digite seu Cnpj">
+                  <label>Cnpj</label>
+                  <input type="text" class="form-control" maxlength="12" id="cpnj" placeholder="Digite seu Cnpj">
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="form-group">
-                  <label for="idade">Area</label>
+                  <label>Area</label>
                   <input type="number" class="form-control" id="area" placeholder="Digite sua area">
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12  d-flex justify-content-center">
+              <div class="col-sm-2">
                 <div class="form-group">
+                  <label style="width: 100%;">&nbsp;</label>
                   <input type="submit" class="btn btn-primary" value="Enviar">
                 </div>
               </div>
@@ -51,14 +50,15 @@
           </form>
         </div>
       </div>
-
-    <div class="row">
-      <div class="col-sm-12  d-flex justify-content-center">
+      
+      <div class="col-sm-12">
         <div class="form-group">
-          <button type="button" class="btn btn-primary" id="back" onclick="voltar()">Voltar</button>
+          <div class="float-right">
+            <button type="button" class="btn btn-primary" id="back" onclick="voltar()">Voltar</button>
+          </div>
         </div>
       </div>
-    </div>
+
   </div>
 
   <?php include 'footer.html';?>

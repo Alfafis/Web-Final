@@ -31,13 +31,13 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label for="cpf">Cpf</label>
-                <input type="text" class="form-control" id="cpf" placeholder="Digite seu cpf">
+                <input type="text" class="form-control" id="cpf" maxlength="11" placeholder="Digite seu cpf">
               </div>
             </div>
             <div class="col-sm-2">
               <div class="form-group">
                 <label for="idade">Idade</label>
-                <input type="number" class="form-control" id="idade" placeholder="Digite sua idade">
+                <input type="number" class="form-control" id="idade" maxlength="2" placeholder="Digite sua idade">
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@
             <div class="col-sm-4">
               <div class="form-group">
                 <label for="matricula">Matricula</label>
-                <input type="text" class="form-control" id="matricula" placeholder="Digite sua Matricula">
+                <input type="text" class="form-control" id="matricula" maxlength="3" placeholder="Digite sua Matricula">
               </div>
             </div>
             <div class="col-sm-4">
@@ -79,13 +79,14 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-sm-12  d-flex justify-content-center">
-        <div class="form-group">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <div class="float-right">
           <button type="button" class="btn btn-primary" id="back" onclick="voltar()">Voltar</button>
         </div>
       </div>
     </div>
+
   </div>
 
   <?php include 'footer.html';?>
