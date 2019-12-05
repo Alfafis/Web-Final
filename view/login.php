@@ -16,6 +16,6 @@ $entrar = $_POST['entrar'];
       } else {
         $result = $verifca->fetch(POO::Fetch_Assoc);
         setcookie('nome', $result["nome_usuario"]);
-        header("Location:view/login.html");
+        header("Location:../view/index.html");
       }
   }

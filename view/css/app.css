@@ -6,6 +6,10 @@ html {
 }
 body {
 	font-family: 'Roboto', sans-serif;
+	background: #9e9e9e30;
+}
+div.container {
+	max-width: 90%;
 }
 
 /* Menu */
@@ -16,7 +20,7 @@ body {
 	color: #cccccc;
 }
 #menu a.navbar-brand {
-		font-family: 'Righteous', cursive;
+	font-family: 'Righteous', cursive;
 	color: red;
 	font-weight: 400;
 }
@@ -33,20 +37,54 @@ li.nav-item:not(:first-child):hover, a.navl-link:not(:first-child):hover {
 }
 
 /* Conteudo*/
-.cards .card {
-	margin: 10px;
-	width: 30px;
+#cards .grids-card {
+	display: inline-grid;
+	grid-template-columns: repeat(2, 3fr);
+	width: 100%;
 }
-
+#cards .card {
+	margin: 10px;
+	padding: 10px;
+}
+#cards a.card {
+	background: #343a4090;
+	text-decoration: unset;
+	color: #ffffff;
+	border: unset;
+	height: 150px;
+}
+#cards a card-icon {
+	height: 50px;
+}
+#cards a.card:hover {
+	box-shadow: 0 0px 8px 8px rgba(0,0,0,0.3);
+	color: red;
+}
+#cards .card-body {
+	padding: 0.5em;
+}
+#cards .card-text {
+	text-align: center;
+	font-size: 18px;
+}
+#cards .card-icon {
+	height: 60%;
+	font-size: 42px;
+	align-items: center;
+}
 /* Footer*/
 .footer {
-	background: #eee;
-	height: 30px;
+	background: #cccccc;
 	position: fixed;
-	bottom: 0;
 	width: 100vw;
+	height: 30px;
+	padding: 5px 0;
+	bottom: 0;
 }
-
+.footer span {
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
 
 /* Login */
 body.log {

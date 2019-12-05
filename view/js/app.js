@@ -5,7 +5,7 @@ window.onload = function(e) {
 	.then(data => { 
 		console.log(data);
 		data.forEach(aluno => {
-			var table = document.querySelector('#tabledados');
+			var table = document.querySelector('#tableAluno');
 			var row = table.insertRow(-1);
 			var idColuna = row.insertCell(0);
 			var nomeColuna = row.insertCell(1); 
@@ -25,12 +25,26 @@ window.onload = function(e) {
 	}).catch(error => console.error(error))
 }
 
-/*
-function adicionarAluno(){
-  let form = document.querySelector('.formAluno');
- 	form.classList.toggle('formVisible');
+window.onload = function(e) {
+	fetch(
+		'http://localhost/Web-Final/empresa', {
+    }).then(response => response.json())
+	.then(data => { 
+		console.log(data);
+		data.forEach(empresa => {
+			var table = document.querySelector('#tableEmpresa');
+			var row = table.insertRow(-1);
+			var idColuna = row.insertCell(0);
+			var nomeColuna = row.insertCell(1); 
+			var cnpjColuna = row.insertCell(2); 
+			var areaColuna = row.insertCell(3);
+			idColuna.innerHTML = empresa.id;
+			nomeColuna.innerHTML = empresa.nome;
+			cnpjColuna.innerHTML = empresa.cnpj;
+			areaColuna.innerHTML = empresa.area;
+		})
+	}).catch(error => console.error(error))
 }
-*/
 
 function enviarForm() {
 	var form = document.querySelector('#adicionarAluno');
@@ -57,3 +71,7 @@ function enviarForm() {
 	.then((data) => console.log(data))
 	.catch(err => console.log('Error message:', err.statusText));
 }
+
+	function voltar() {
+		window.history.back();	
+	}
