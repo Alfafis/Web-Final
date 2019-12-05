@@ -1,19 +1,19 @@
 window.onload = function(e) {
 	fetch(
-		'http://localhost/Web-Final/aluno', {
-    }).then(response => response.json())
+		'http://localhost/Web-Final/aluno', {		
+		}).then(response => response.json())				
 	.then(data => { 
 		console.log(data);
-		data.forEach(aluno => {
-			var table = document.querySelector('#tableAluno');
+		data.forEach(aluno => {  
+			var table = document.getElementById("tableAluno");
 			var row = table.insertRow(-1);
 			var idColuna = row.insertCell(0);
 			var nomeColuna = row.insertCell(1); 
-			var cpfColuna = row.insertCell(2); 
-			var idadeColuna = row.insertCell(3); 
-			var cursoColuna = row.insertCell(4); 
-			var sexoColuna = row.insertCell(5); 
-			var matriculaColuna = row.insertCell(6);
+			var cpfColuna = row.insertCell(1); 
+			var idadeColuna = row.insertCell(2); 
+			var cursoColuna = row.insertCell(3); 
+			var sexoColuna = row.insertCell(4); 
+			var matriculaColuna = row.insertCell(5); 
 			idColuna.innerHTML = aluno.id;
 			nomeColuna.innerHTML = aluno.nome;
 			cpfColuna.innerHTML = aluno.cpf;
@@ -23,9 +23,7 @@ window.onload = function(e) {
 			matriculaColuna.innerHTML = aluno.matricula;
 		})
 	}).catch(error => console.error(error))
-}
 
-window.onload = function(e) {
 	fetch(
 		'http://localhost/Web-Final/empresa', {
     }).then(response => response.json())
@@ -74,4 +72,9 @@ function enviarForm() {
 
 function voltar() {
 	window.history.back();	
+}
+
+function pegarValor() {
+	var valorCard = document.querySelector("a.card").properties.value();
+	console.log(valorCard);
 }

@@ -69,9 +69,12 @@ li.nav-item:not(:first-child):hover, a.navl-link:not(:first-child):hover {
 }
 #cards .card-icon {
 	height: 60%;
-	font-size: 42px;
 	align-items: center;
 }
+#cards .card-icon i {
+	font-size: 32px;
+}
+
 /* Footer*/
 .footer {
 	background: #cccccc;

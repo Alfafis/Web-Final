@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Fronteira abertas</title>
+
+  <link rel="shortcut icon" href="./image/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="../view/css/app.css" />
+</head>
+
+<body>
+  <?php include 'header.html';?>
+
+  <div class="container">
+    <div class="container fluid">
+      <div class="col-sm-12">
+        <h5 style="text-align: center;">Tabela de Aluno</h5>
+        <table class="table stripped">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>nome</th>
+              <th>cpf</th>
+              <th>idade</th>
+              <th>curso</th>
+              <th>sexo</th>
+              <th>matricula</th>
+            </tr>
+          </thead>
+          <tbody id="tableAluno">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12  d-flex justify-content-center">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" id="back" onclick="voltar()">Voltar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <?php include 'footer.html';?>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script type="text/javascript" src="../view/js/app.js"></script>
+</body>
+
+</html>

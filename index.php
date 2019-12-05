@@ -40,8 +40,17 @@ switch ($request) {
     case '/'.PASTAPROJETO.'/' :
 				require __DIR__ . '/view/index.html';
         break;
-				case '/'.PASTAPROJETO.'/consulta' :
-					require __DIR__ . '/view/consulta.html';
+				case '/'.PASTAPROJETO.'/consulta_aluno' :
+					require __DIR__ . '/view/consultaAluno.html';
+				break;
+				case '/'.PASTAPROJETO.'/consulta_empresa' :
+					require __DIR__ . '/view/consultaEmpresa.html';
+				break;
+				case '/'.PASTAPROJETO.'/cadastro_aluno' :
+					require __DIR__ . '/view/cadastroAluno.html';
+				break;
+				case '/'.PASTAPROJETO.'/cadastro_empresa' :
+					require __DIR__ . '/view/cadastroEmpresa.html';
 				break;
     case '' :
         require __DIR__ . '/api/api.php';
