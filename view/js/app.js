@@ -72,6 +72,6 @@ function enviarForm() {
 	.catch(err => console.log('Error message:', err.statusText));
 }
 
-	function voltar() {
-		window.history.back();	
-	}
+function voltar() {
+	window.history.back();	
+}
