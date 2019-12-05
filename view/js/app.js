@@ -25,10 +25,12 @@ window.onload = function(e) {
 	}).catch(error => console.error(error))
 }
 
+/*
 function adicionarAluno(){
   let form = document.querySelector('.formAluno');
  	form.classList.toggle('formVisible');
 }
+*/
 
 function enviarForm() {
 	var form = document.querySelector('#adicionarAluno');

@@ -1,20 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Righteous|Roboto&display=swap');
+
 html {
 	height: 100vh;
 	overflow-x: hidden;
 }
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Menu */
+#menu span {
+	font-family: 'Oswald', sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	color: #cccccc;
+}
+#menu a.navbar-brand {
+		font-family: 'Righteous', cursive;
+	color: red;
+	font-weight: 400;
+}
 nav.navbar  {
 	margin-bottom: 15px;
 }
-.formAluno {
-	display: none;
+#menu a.nav-link {
+	color: #ffffff;
 }
-.formVisible {
-  display: block;
+li.nav-item:not(:first-child):hover, a.navl-link:not(:first-child):hover {
+	background: #fb030390;
+	color: #ffffff;
+	border-radius: 3%;
 }
-.centered {
-	text-align: center;
-  	display: table-row;
+
+/* Conteudo*/
+.cards .card {
+	margin: 10px;
+	width: 30px;
 }
+
+/* Footer*/
+.footer {
+	background: #eee;
+	height: 30px;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+}
+
 
 /* Login */
 body.log {
