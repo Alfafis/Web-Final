@@ -13,11 +13,11 @@
 
 
 -- Copiando estrutura do banco de dados para web-final
-CREATE DATABASE IF NOT EXISTS `web-final` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE `web-final` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `web-final`;
 
 -- Copiando estrutura para tabela web-final.alunos
-CREATE TABLE IF NOT EXISTS `alunos` (
+CREATE TABLE `alunos` (
   `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `cpf` varchar(50) NOT NULL DEFAULT '',
@@ -39,7 +39,7 @@ INSERT INTO `alunos` (`id`, `nome`, `cpf`, `idade`, `curso`, `sexo`, `matricula`
 /*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela web-final.empresas
-CREATE TABLE IF NOT EXISTS `empresas` (
+CREATE TABLE `empresas` (
   `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `cnpj` varchar(120) NOT NULL,
@@ -58,7 +58,7 @@ INSERT INTO `empresas` (`id`, `nome`, `cnpj`, `area`) VALUES
 /*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela web-final.users
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(4) unsigned NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) NOT NULL,
   `senha` varchar(60) NOT NULL,

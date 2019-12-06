@@ -28,7 +28,7 @@ function checkRequest() {
 $answer = checkRequest();
 
 $request = $_SERVER['REQUEST_URI']; 
-http://localhost/Web-Final/
+http://localhost:8080/Web-Final/
 
 switch ($request) {
     case '/':
@@ -38,28 +38,31 @@ switch ($request) {
       require __DIR__ . '/view/index.html';
 		break;
     case '/'.PASTAPROJETO.'/' :
-				require __DIR__ . '/view/index.html';
-        break;
-				case '/'.PASTAPROJETO.'/consulta_aluno' :
-					require __DIR__ . '/view/consultaAluno.html';
-				break;
-				case '/'.PASTAPROJETO.'/consulta_empresa' :
-					require __DIR__ . '/view/consultaEmpresa.html';
-				break;
-				case '/'.PASTAPROJETO.'/cadastro_aluno' :
-					require __DIR__ . '/view/cadastroAluno.html';
-				break;
-				case '/'.PASTAPROJETO.'/cadastro_empresa' :
-					require __DIR__ . '/view/cadastroEmpresa.html';
-				break;
+			require __DIR__ . '/view/index.html';
+		break;
+	case '/'.PASTAPROJETO.'/consulta_aluno' :
+		require __DIR__ . '/view/consultaAluno.html';
+		break;
+	case '/'.PASTAPROJETO.'/login' :
+		require __DIR__ . '/view/login.php';
+		break;
+	case '/'.PASTAPROJETO.'/consulta_empresa' :
+		require __DIR__ . '/view/consultaEmpresa.html';
+		break;
+	case '/'.PASTAPROJETO.'/cadastro_aluno' :
+		require __DIR__ . '/view/cadastroAluno.html';
+		break;
+	case '/'.PASTAPROJETO.'/cadastro_empresa' :
+		require __DIR__ . '/view/cadastroEmpresa.html';
+		break;
     case '' :
         require __DIR__ . '/api/api.php';
         break;
     case '/'.PASTAPROJETO.'/aluno' :
-        require __DIR__ . '/api/'.$answer.'_Aluno.php';
+        require __DIR__ . '/api/'.$answer.'_aluno.php';
         break;
     case '/'.PASTAPROJETO.'/empresa' :
-        require __DIR__ . '/api/'.$answer.'_Empresa.php';
+        require __DIR__ . '/api/'.$answer.'_empresa.php';
 				break;
     default:
         require __DIR__ . '/api/404.php';

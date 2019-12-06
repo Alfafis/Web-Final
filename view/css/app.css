@@ -105,6 +105,7 @@ body.log {
   font-family: "Poppins", sans-serif;
 	justify-content: center;
 	align-items: center;
+  background: unset;
 	display: flex;
   height: 100vh;
 }
