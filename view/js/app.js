@@ -42,9 +42,42 @@ window.onload = function(e) {
 			areaColuna.innerHTML = empresa.area;
 		})
 	}).catch(error => console.error(error))
+
+	fetch(
+		'http://localhost/Web-Final/aluno', {
+    }).then(response => response.json())
+	.then(data => { 
+		console.log(data);
+		data.forEach(empresa => {
+			var table = document.querySelector('#tableAlterAluno');
+			var row = table.insertRow(-1);
+			var labelColuna = row.insertCell(0);
+			var nomeColuna = row.insertCell(1); 
+			var optionColuna = row.insertCell(2);
+			labelColuna.innerHTML = '<span>&nbsp</span>';
+			nomeColuna.innerHTML = empresa.nome;
+			optionColuna.innerHTML = '<div class="form-group"><button>alterar</button><button>deletar</button></div>';
+		})
+	}).catch(error => console.error(error))
+	fetch(
+		'http://localhost/Web-Final/empresa', {
+    }).then(response => response.json())
+	.then(data => { 
+		console.log(data);
+		data.forEach(empresa => {
+			var table = document.querySelector('#tableAlterEmpresa');
+			var row = table.insertRow(-1);
+			var labelColuna = row.insertCell(0);
+			var nomeColuna = row.insertCell(1); 
+			var optionColuna = row.insertCell(2);
+			labelColuna.innerHTML = '<span>&nbsp</span>';
+			nomeColuna.innerHTML = empresa.nome;
+			optionColuna.innerHTML = '<div class="form-group"><button>alterar</button><button>deletar</button></div>';
+		})
+	}).catch(error => console.error(error))
 }
 
-function enviarForm() {
+function postFormAluno() {
 	var form = document.querySelector('#adicionarAluno');
 	var data = {};
 	data['nome'] = form.nome.value
@@ -55,6 +88,29 @@ function enviarForm() {
 	data['matricula'] = form.matricula.value;
 	// console.log(JSON.stringify(data));
 	fetch('http://localhost/Web-Final/aluno', {
+		method: 'POST',
+		body: JSON.stringify(data)
+	})
+	.then((response) => {
+		if (response.ok) {
+			return response.json() 
+		} else {
+			return Promise.reject({ status: res.status, statusText: res.statusText });
+		}   
+
+	})
+	.then((data) => console.log(data))
+	.catch(err => console.log('Error message:', err.statusText));
+}
+
+function postFormEmpresa() {
+	var form = document.querySelector('#adicionarEmpresa');
+	var data = {};
+	data['nome'] = form.nome.value
+	data['cnpj'] = form.cnpj.value;
+	data['area'] = form.area.value;
+	// console.log(JSON.stringify(data));
+	fetch('http://localhost/Web-Final/empresa', {
 		method: 'POST',
 		body: JSON.stringify(data)
 	})

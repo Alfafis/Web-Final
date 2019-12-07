@@ -19,7 +19,7 @@
     <div class="row formEmpresa" id="formEmpresa">
       <h5 class="title">Adicionar uma nova empresa</h5>
         <div class="col-sm-12">
-          <form id="adicionarEmpresa" action="javascript:enviarForm()">
+          <form id="adicionarEmpresa" action="javascript:postFormEmpresa()">
             <div class="row">
               <div class="col-sm-4">
                 <div class="form-group">
@@ -31,13 +31,13 @@
               <div class="col-sm-4">
                 <div class="form-group">
                   <label>Cnpj</label>
-                  <input type="text" class="form-control" maxlength="12" id="cpnj" placeholder="Digite seu Cnpj">
+                  <input type="number" class="form-control" maxlength="12" id="cpnj" placeholder="Digite seu Cnpj">
                 </div>
               </div>
               <div class="col-sm-2">
                 <div class="form-group">
                   <label>Area</label>
-                  <input type="number" class="form-control" id="area" placeholder="Digite sua area">
+                  <input type="text" class="form-control" id="area" placeholder="Digite sua area">
                 </div>
               </div>
               <div class="col-sm-2">
