@@ -55,16 +55,22 @@ switch ($request) {
 	case '/'.PASTAPROJETO.'/cadastro_empresa' :
 		require __DIR__ . '/view/cadastroEmpresa.html';
 		break;
-    case '' :
-        require __DIR__ . '/api/api.php';
-        break;
-    case '/'.PASTAPROJETO.'/aluno' :
-        require __DIR__ . '/api/'.$answer.'_Aluno.php';
-        break;
-    case '/'.PASTAPROJETO.'/empresa' :
-        require __DIR__ . '/api/'.$answer.'_Empresa.php';
-				break;
-    default:
-        require __DIR__ . '/api/404.php';
-        break;
+	case '/'.PASTAPROJETO.'/alterar_aluno' :
+		require __DIR__ . '/view/alteraAluno.html';
+		break;
+	case '/'.PASTAPROJETO.'/alterar_empresa' :
+		require __DIR__ . '/view/alteraEmpresa.html';
+		break;	
+	case '' :
+			require __DIR__ . '/api/api.php';
+			break;
+	case '/'.PASTAPROJETO.'/aluno' :
+			require __DIR__ . '/api/'.$answer.'_Aluno.php';
+			break;
+	case '/'.PASTAPROJETO.'/empresa' :
+			require __DIR__ . '/api/'.$answer.'_Empresa.php';
+			break;
+	default:
+			require __DIR__ . '/api/404.php';
+			break;
 }

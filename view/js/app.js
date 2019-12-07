@@ -71,10 +71,9 @@ function enviarForm() {
 }
 
 function voltar() {
-	window.history.back();	
+	window.history.back();
 }
 
-function pegarValor() {
-	var valorCard = document.querySelector("a.card").properties.value();
-	console.log(valorCard);
+function go() {
+	window.history.go();
 }
