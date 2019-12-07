@@ -81,6 +81,15 @@ li.nav-item	:hover, a.navl-link:hover {
 #cards .card-icon i {
 	font-size: 32px;
 }
+h5.title {
+	font-family: 'Oswald', sans-serif;
+	background: #fd7070;
+  padding: 10px 15px;
+  text-align: center;
+	color: #ffffff;
+	font-size: 32px;
+	width: 100%;
+}
 
 /* Footer*/
 .footer {

@@ -17,6 +17,6 @@ $entrar = $_POST['entrar'];
       } else {
         $result = $verifica->fetch();
         //setcookie('nome', $result["nome_usuario"]);
-        header("Location:http://localhost:8080/Web-Final/");
+        header("Location:http://localhost/Web-Final/");
       }
   }

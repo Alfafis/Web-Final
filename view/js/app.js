@@ -1,6 +1,6 @@
 window.onload = function(e) {
 	fetch(
-		'http://localhost:8080/Web-Final/aluno', {		
+		'http://localhost/Web-Final/aluno', {		
 		}).then(response => response.json())				
 	.then(data => { 
 		console.log(data);
@@ -25,7 +25,7 @@ window.onload = function(e) {
 	}).catch(error => console.error(error))
 
 	fetch(
-		'http://localhost:8080/Web-Final/empresa', {
+		'http://localhost/Web-Final/empresa', {
     }).then(response => response.json())
 	.then(data => { 
 		console.log(data);
@@ -54,7 +54,7 @@ function enviarForm() {
 	data['sexo'] = form.sexo.value;
 	data['matricula'] = form.matricula.value;
 	// console.log(JSON.stringify(data));
-	fetch('http://localhost:8080/Web-Final/aluno', {
+	fetch('http://localhost/Web-Final/aluno', {
 		method: 'POST',
 		body: JSON.stringify(data)
 	})

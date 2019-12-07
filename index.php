@@ -28,7 +28,7 @@ function checkRequest() {
 $answer = checkRequest();
 
 $request = $_SERVER['REQUEST_URI']; 
-http://localhost:8080/Web-Final/
+http://localhost/Web-Final/
 
 switch ($request) {
     case '/':
@@ -59,10 +59,10 @@ switch ($request) {
         require __DIR__ . '/api/api.php';
         break;
     case '/'.PASTAPROJETO.'/aluno' :
-        require __DIR__ . '/api/'.$answer.'_aluno.php';
+        require __DIR__ . '/api/'.$answer.'_Aluno.php';
         break;
     case '/'.PASTAPROJETO.'/empresa' :
-        require __DIR__ . '/api/'.$answer.'_empresa.php';
+        require __DIR__ . '/api/'.$answer.'_Empresa.php';
 				break;
     default:
         require __DIR__ . '/api/404.php';
