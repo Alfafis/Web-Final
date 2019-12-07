@@ -90,6 +90,12 @@ h5.title {
 	font-size: 32px;
 	width: 100%;
 }
+table.table td, table.table th {
+  padding: 7px;
+}
+.table .btn-sm i {
+  font-size: 16px;
+}
 
 /* Footer*/
 .footer {

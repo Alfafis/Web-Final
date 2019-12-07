@@ -22,9 +22,10 @@
         <table class="table table-hover">
           <thead class="thead-dark">
             <tr>
-              <th>#</th>
-              <th>nome</th>
-              <th>opções</th>
+              <th style="width: 10%;">#</th>
+              <th style="width: 40%;">nome</th>
+              <th style="width: 40%;">curso</th>
+              <th style="width: 10%;">opções</th>
             </tr>
           </thead>
           <tbody id="tableAlterAluno">
@@ -37,6 +38,104 @@
           <div class="float-right">
             <button type="button" class="btn btn-primary" id="back" onclick="voltar()">Voltar</button>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Alterar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="alterarAluno" action="javascript:updateFormAluno()">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="form-control" aria-describedby="nomeHelp" id="nome">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="cpf">Cpf</label>
+                  <input type="text" class="form-control" id="cpf" maxlength="11">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="idade">Idade</label>
+                  <input type="number" class="form-control" id="idade" maxlength="2">
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="curso">Curso</label>
+                  <input type="text" class="form-control" id="curso" >
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="matricula">Matricula</label>
+                  <input type="number" class="form-control" id="matricula" maxlength="3">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="sexo">Sexo</label>
+                  <div class="form-check-inline">
+                    <label class="form-check-label"></label>
+                    <input type="radio" class="form-check-input" value="Masculino" name="sexo">Masculino
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label"></label>
+                    <input type="radio" class="form-check-input" value="Feminino" name="sexo">Feminino
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12  d-flex justify-content-center">
+                <div class="form-group">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Enviar" onclick="go()">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Deletar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span>Deseja mesmo deletar?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger">Deletar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
         </div>
       </div>
     </div>
